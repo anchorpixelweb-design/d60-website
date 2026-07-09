@@ -1,0 +1,15 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+
+# Node (only if dependencies are ever added; the preview server needs none)
+node_modules/
+npm-debug.log*
+
+# Logs and temp
+*.log
