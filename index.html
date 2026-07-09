@@ -125,7 +125,7 @@ p{margin:0}
 .hero-visual{position:relative; justify-self:center}
 .hero-visual .plate{position:absolute; inset:auto 0 8% 0; height:34%; z-index:0;
   background:radial-gradient(ellipse at center, rgba(200,146,43,.22), transparent 70%); filter:blur(14px)}
-.hero-img{position:relative; z-index:1; width:min(46vw,540px); filter:drop-shadow(0 40px 60px rgba(0,0,0,.7)) drop-shadow(0 0 40px rgba(200,146,43,.12)); animation:float 7s ease-in-out infinite}
+.hero-img{position:relative; z-index:1; width:min(46vw,540px); height:auto; aspect-ratio:1/1; object-fit:contain; filter:drop-shadow(0 40px 60px rgba(0,0,0,.7)) drop-shadow(0 0 40px rgba(200,146,43,.12)); animation:float 7s ease-in-out infinite}
 .hero-tag{position:absolute; z-index:3; background:rgba(20,17,16,.82); backdrop-filter:blur(8px); border:1px solid var(--line); border-radius:100px; padding:10px 18px; font-size:13px; font-weight:600; display:flex; align-items:center; gap:9px; box-shadow:0 12px 30px -10px rgba(0,0,0,.7)}
 .hero-tag .pt{width:7px; height:7px; border-radius:50%; background:var(--gold); box-shadow:0 0 10px var(--gold)}
 .hero-tag.t1{top:14%; left:-4%; animation:float 6s ease-in-out infinite}
@@ -296,10 +296,11 @@ footer{border-top:1px solid var(--line-soft); padding:72px 0 40px; background:#0
   .burger-toggle{display:flex}
   .order-bar{display:flex}
   body{padding-bottom:74px}
-  .section{padding:64px 0}
-  .hero{min-height:auto; padding-top:120px}
+  .section{padding:56px 0}
+  .hero{min-height:auto; padding-top:100px; padding-bottom:24px}
   .hero-tag{display:none}
   .hero-meta{gap:18px}
+  .scroll-cue{display:none}
   /* signatures become a swipe carousel */
   .sig-scroll{display:flex; grid-template-columns:none; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; margin-left:calc(-1*clamp(20px,5vw,48px)); margin-right:calc(-1*clamp(20px,5vw,48px)); padding:4px clamp(20px,5vw,48px); gap:16px; scrollbar-width:none}
   .sig-scroll::-webkit-scrollbar{display:none}
@@ -309,6 +310,9 @@ footer{border-top:1px solid var(--line-soft); padding:72px 0 40px; background:#0
   .gal-grid{grid-template-columns:repeat(2,1fr)}
   .gal.tall{grid-row:span 1; aspect-ratio:1}
   .foot-grid{grid-template-columns:1fr}
+  .story-grid{gap:20px}
+  .story-visual{max-width:none; margin:4px 0 0}
+  .story-visual .frame{aspect-ratio:3/4}
   .story-badge{left:0}
   .map-frame{min-height:320px}
   .map-frame iframe{min-height:320px}
