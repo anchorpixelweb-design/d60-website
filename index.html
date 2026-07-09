@@ -294,10 +294,14 @@ footer{border-top:1px solid var(--line-soft); padding:72px 0 40px; background:#0
 @media (max-width:720px){
   .nav-links, .nav-cta .link-order{display:none}
   .burger-toggle{display:flex}
+  /* top banner: solid, flush to the top, clear of the status bar / notch */
+  .nav{background:rgba(14,13,12,.85); backdrop-filter:blur(16px) saturate(1.2); -webkit-backdrop-filter:blur(16px) saturate(1.2); border-bottom:1px solid var(--line-soft); padding-top:env(safe-area-inset-top)}
+  .nav-in{height:62px}
+  /* bottom banner: flush to the bottom, clear of the home indicator */
   .order-bar{display:flex}
-  body{padding-bottom:74px}
+  body{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
   .section{padding:56px 0}
-  .hero{min-height:auto; padding-top:100px; padding-bottom:24px}
+  .hero{min-height:auto; padding-top:calc(88px + env(safe-area-inset-top)); padding-bottom:24px}
   .hero-tag{display:none}
   .hero-meta{gap:18px}
   .scroll-cue{display:none}
